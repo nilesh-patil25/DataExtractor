@@ -172,14 +172,22 @@ namespace DataExtractor.API.Controllers
             
         }
 
-        // Method to get the laterality value from the response
+        /// <summary>
+        /// Method to get the laterality value from the response
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         private static string GetLaterality(string input)
         {
             Match match = Regex.Match(input, @"(OD|OS|OU)");
             return match.Success ? match.Value : "N/A";
         }
 
-        // Method to get the qualifier value from the response
+        /// <summary>
+        /// Method to get the qualifier value from the response
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         private static string GetDistanceOrNear(string input)
         {
             Match match = Regex.Match(input, @"(Distance|Near)");
