@@ -193,6 +193,12 @@ namespace DataExtractor.API.Controllers
             Match match = Regex.Match(input, @"(Distance|Near)");
             return match.Success ? match.Value : "N/A";
         }
+
+        /// <summary>
+        /// Method to get the qualifier value from the response
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
     }
 
     #endregion
